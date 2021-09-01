@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Los dueños de la historia</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar__top"></div>
+            <div class="navbar__container">
+                <div class="navbar__logo">
+                    <a href="index.html"><img class="navbar__la12" src="media/logolddlh.svg" alt="Los dueños de la historia logo"></a>
+                </div>
+                <div id="mainListDiv" class="navbar__list">
+                    <ul class="navbar__links">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Indumentaria</a></li>
+                        <li><a href="#"><img class="nabvar__icons" src="media/search.svg" alt=""></a></li>
+                        <li><a href="#"><img class="nabvar__icons" src="media/user.svg" alt=""></a></li>
+                        <li><a href="#"><img class="nabvar__icons" src="media/cart.svg" alt=""></a></li>
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="container"></section>
+        <div class="container__ind">
+            <img class="star" src="media/star.svg" alt="star">
+            <h1 class="ind__title">Indumentaria</h1>
+            <img class="star" src="media/star.svg" alt="star">
+        </div>
+        <div class="container">
+            <!-- Elementos generados a partir del JSON -->
+            <div id="container__garments"></div>
+            <!-- Carrito -->
+            <aside class="cart__container">
+                <h2 class="cart__title">Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="cart__list" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="cart__text">Total: <span id="total"></span>$;</p>
+                <button id="boton-vaciar">Vaciar</button>
+            </aside> 
+        </div>
+    </main>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
