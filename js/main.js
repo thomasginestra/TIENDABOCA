@@ -1,14 +1,14 @@
 // Variables
 window.onload = function () {
 const baseDeDatos = [
-    { id : 1, nombre : "Campera Boca", precio : 2000, genero : "mujer" , imagen : '../media/remera.png'},
-    { id : 2, nombre : "Campera Boca", precio : 7000, genero : "hombre" , imagen : '../media/remera.png'},
-    { id : 3, nombre : "Campera Boca", precio : 3600, genero : "mujer" , imagen : '../media/remera.png'},
-    { id : 4, nombre : "Campera Boca", precio : 2500, genero : "hombre" , imagen : '../media/remera.png'},
-    { id : 5, nombre : "Campera Boca", precio : 2200, genero : "mujer" , imagen : '../media/remera.png'},
-    { id : 6, nombre : "Campera Boca", precio : 700, genero : "mujer" , imagen : '../media/remera.png'},
-    { id : 7, nombre : "Campera Boca", precio : 4000, genero : "hombre" , imagen : '../media/remera.png'},
-    { id : 8, nombre : "Campera Boca", precio : 8000, genero : "hombre" , imagen : '../media/remera.png'},
+    { id : 1, nombre : "Campera Boca", precio : 2000, genero : "mujer" , imagen : 'media/remera.png'},
+    { id : 2, nombre : "Campera Boca", precio : 700, genero : "hombre" , imagen : 'media/remera.png'},
+    { id : 3, nombre : "Campera Boca", precio : 360, genero : "mujer" , imagen : 'media/remera.png'},
+    { id : 4, nombre : "Campera Boca", precio : 2500, genero : "hombre" , imagen : 'media/remera.png'},
+    { id : 5, nombre : "Campera Boca", precio : 220, genero : "mujer" , imagen : 'media/remera.png'},
+    { id : 6, nombre : "Campera Boca", precio : 700, genero : "mujer" , imagen : 'media/remera.png'},
+    { id : 7, nombre : "Campera Boca", precio : 400, genero : "hombre" , imagen : 'media/remera.png'},
+    { id : 8, nombre : "Campera Boca", precio : 800, genero : "hombre" , imagen : 'media/remera.png'},
 ]
 
     let carrito = [];
@@ -21,9 +21,8 @@ const baseDeDatos = [
 
     // Funciones
 
-    /**
-    * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
-    */
+
+// Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
     function renderizarProductos() {
         baseDeDatos.forEach((info) => {
             // Estructura
@@ -60,9 +59,7 @@ const baseDeDatos = [
         });
     }
 
-    /**
-    * Evento para añadir un producto al carrito de la compra
-    */
+// Evento para añadir un producto al carrito de la compra
     function anyadirProductoAlCarrito(evento) {
         // Anyadimos el Nodo a nuestro carrito
         carrito.push(evento.target.getAttribute('marcador'))
@@ -74,9 +71,9 @@ const baseDeDatos = [
         guardarCarritoEnLocalStorage();
     }
 
-    /**
-    * Dibuja todos los productos guardados en el carrito
-    */
+
+// Dibuja todos los productos guardados en el carrito
+
     function renderizarCarrito() {
         // Vaciamos todo el html
         DOMcarrito.textContent = '';
@@ -111,9 +108,7 @@ const baseDeDatos = [
         });
     }
 
-    /**
-    * Evento para borrar un elemento del carrito
-    */
+// Evento para borrar un elemento del carrito
     function borrarItemCarrito(evento) {
         // Obtenemos el producto ID que hay en el boton pulsado
         const id = evento.target.dataset.item;
@@ -130,9 +125,8 @@ const baseDeDatos = [
 
     }
 
-    /**
-    * Calcula el precio total teniendo en cuenta los productos repetidos
-    */
+
+// Calcula el precio total teniendo en cuenta los productos repetidos
     function calcularTotal() {
         // Limpiamos precio anterior
         total = 0;
@@ -148,9 +142,9 @@ const baseDeDatos = [
         DOMtotal.textContent = total.toFixed(2);
     }
 
-    /**
-    * Varia el carrito y vuelve a dibujarlo
-    */
+
+// Varia el carrito y vuelve a dibujarlo
+
     function vaciarCarrito() {
         // Limpiamos los productos guardados
         carrito = [];

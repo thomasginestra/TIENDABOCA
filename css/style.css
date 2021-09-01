@@ -151,7 +151,7 @@ body {
 
 .card__title {
   color: #001433;
-  font-size: 1.4em;
+  font-size: 2em;
   font-weight: bold;
   padding: 0.8em 0 0.8em 0;
   margin: 0;
@@ -188,6 +188,44 @@ body {
 
 img {
   width: 100%;
+}
+
+.cart__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4em 0 4em 0;
+}
+
+#cart__list {
+  font-size: 1.5em;
+}
+
+.cart__text {
+  font-size: 2em;
+}
+
+#boton-vaciar {
+  padding: 1rem 1.5rem;
+  border-radius: 18px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #001433;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 1.5em;
+}
+
+#total {
+  font-weight: bold;
+}
+
+.cart__title {
+  font-size: 3em;
 }
 
 /* Media query section */
