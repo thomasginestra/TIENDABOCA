@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Los dueños de la historia</title>
+    <title>TIENDA LDDLH</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="navbar__top"></div>
             <div class="navbar__container">
                 <div class="navbar__logo">
-                    <a href="index.html"><img class="navbar__la12" src="media/logolddlh.svg" alt="Los dueños de la historia logo"></a>
+                    <a class="navbar__title" href="index.html"><img src="media/la12.svg" alt=""></a>
                 </div>
                 <div id="mainListDiv" class="navbar__list">
                     <ul class="navbar__links">
@@ -36,7 +37,15 @@
         </nav>
     </header>
     <main>
-        <section id="container"></section>
+        <section id="banner__container">
+            <div class="banner__text">
+                <img class="banner__logo" src="media/logolddlh.svg" alt="">
+                <h1 class="banner__title">Los dueños de la historia</h1>
+                <h3 class="banner__subtitle">La tienda sin descensos</h3>
+                <p class="banner__sentence">¡Ahora vos también podes ser parte de la hinchada más grande del mundo! <br>
+                    ¿Estás preparado para vivir tu pasión como nunca antes?</p>
+            </div>
+        </section>
         <div class="container__ind">
             <img class="star" src="media/star.svg" alt="star">
             <h1 class="ind__title">Indumentaria</h1>
@@ -56,8 +65,14 @@
                 <button id="boton-vaciar">Vaciar</button>
             </aside>
         </div>
+        <footer>
+            <div id="footer__content">
+                <p class="footer__text">Los Dueños de la Historia®</p>
+                <p class="footer__text">Terminos y condiciones | Aviso legal</p>
+            </div>
+        </footer>
     </main>
-    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/main.js"></script>
 </body>

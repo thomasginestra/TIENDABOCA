@@ -1,5 +1,4 @@
-html,
-body {
+html, body, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -14,27 +13,27 @@ body {
   height: 73px;
   position: fixed;
   line-height: 74px;
-  z-index: 100;
   text-align: center;
+  z-index: 100;
   padding-top: 0.8125rem;
   padding-bottom: 1.25rem;
-  background-color: #001433e3;
-}
-
-.navbar__la12 {
-  width: 60px;
-  padding-top: 4px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .navbar .navbar__logo {
   float: left;
-  width: auto;
+  width: 58px;
   height: 73px;
   padding-left: 3rem;
+  padding-top: 6px;
 }
 
-.navbar .navbar__logo a {
-  font-size: 0px;
+.navbar .navbar__logo .navbar__title {
+  color: #fff;
+  font-size: 3em;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .navbar .navbar__list {
@@ -79,12 +78,63 @@ body {
 }
 
 /* Home section */
-#container {
+#banner__container {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(../media/hinchada.jpg);
-  background-position: center top;
   background-size: cover;
+  background-position: center;
+  background-image: url(../media/hinchada.jpg);
+}
+
+#banner__container .banner__text {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #102162), color-stop(80%, #0050A5));
+  background-image: linear-gradient(180deg, #102162 3%, #0050A5 80%);
+  opacity: 0.9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#banner__container .banner__text .banner__title {
+  font-size: 5.2em;
+  padding-top: 20px;
+  line-height: 1em;
+  font-weight: 600;
+}
+
+#banner__container .banner__text .banner__subtitle {
+  font-size: 4.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #ffca0a;
+  padding-top: 8px;
+}
+
+#banner__container .banner__text .banner__sentence {
+  color: #FFFFFF;
+  font-size: 2em;
+  margin-bottom: .9rem;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.banner__logo {
+  width: 200px;
 }
 
 .navTrigger {
@@ -101,7 +151,7 @@ body {
 .container__ind {
   width: 100%;
   height: 80px;
-  background-color: #001433;
+  background-color: #ffca0a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,9 +167,9 @@ body {
   margin: 0;
   font-size: 3em;
   text-transform: uppercase;
-  color: #ffca0a;
-  padding-left: 10px;
-  padding-right: 10px;
+  color: #09184f;
+  padding-left: 6px;
+  padding-right: 6px;
   font-weight: 500;
 }
 
@@ -228,6 +278,35 @@ img {
   font-size: 3em;
 }
 
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #0c254d;
+}
+
+footer #footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #cccccc;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1420px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer #footer__content .footer__text {
+  margin: 16px;
+  font-size: 14px;
+}
+
 /* Media query section */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .navbar__container {
@@ -239,7 +318,11 @@ img {
   .navTrigger {
     display: block;
   }
+  .navbar {
+    height: 81px;
+  }
   .navbar .navbar__logo {
+    padding-top: 8px;
     margin-left: 15px;
   }
   .navbar .navbar__list {
@@ -257,7 +340,7 @@ img {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #09184ff0;
+    background-color: #ffca0ae0;
     background-position: center top;
   }
   .navbar .navbar__list .navbar__links li {
@@ -268,7 +351,11 @@ img {
     text-align: center;
     width: 100%;
     font-size: 3rem;
+    color: #001433;
     padding: 20px;
+  }
+  .navbar .navbar__list .navbar__links li a:hover {
+    color: #ffffff;
   }
   .navbar .navbar__list .navbar__links li a .nabvar__icons {
     display: none;
@@ -489,7 +576,7 @@ img {
 
 .affix {
   padding: 0;
-  background-color: #001433;
+  background-color: #001433eb;
 }
 
 .myH2 {
