@@ -87,7 +87,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
   background-image: url(../media/hinchada.jpg);
 }
 
-#banner__container .banner__text {
+#banner__container .banner__text-container {
   width: 100%;
   height: 100%;
   color: #fff;
@@ -95,6 +95,9 @@ html, body, h1, h2, h3, h4, h5, h6 {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #102162), color-stop(80%, #0050A5));
   background-image: linear-gradient(180deg, #102162 3%, #0050A5 80%);
   opacity: 0.9;
+}
+
+#banner__container .banner__text-container .banner__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,33 +111,43 @@ html, body, h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
 }
 
-#banner__container .banner__text .banner__title {
+#banner__container .banner__text-container .banner__text .banner__title {
   font-size: 5.2em;
   padding-top: 20px;
   line-height: 1em;
   font-weight: 600;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  text-align: center;
 }
 
-#banner__container .banner__text .banner__subtitle {
+#banner__container .banner__text-container .banner__text .banner__subtitle {
   font-size: 4.5em;
   text-transform: uppercase;
   font-weight: 900;
   color: #ffca0a;
   padding-top: 8px;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  text-align: center;
 }
 
-#banner__container .banner__text .banner__sentence {
+#banner__container .banner__text-container .banner__text .banner__sentence {
   color: #FFFFFF;
   font-size: 2em;
-  margin-bottom: .9rem;
   text-align: center;
   line-height: 1.5em;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  text-align: center;
 }
 
 .banner__logo {
   width: 200px;
+  margin-bottom: 30px;
 }
 
 .navTrigger {
@@ -594,6 +607,37 @@ footer #footer__content .footer__text {
 @media all and (max-width: 700px) {
   .myP {
     padding: 2%;
+  }
+  .banner__logo {
+    margin-bottom: 0px;
+  }
+  #banner__container .banner__text-container .banner__text .banner__title {
+    /* font-size: 5.2em; */
+    font-size: 4.4em;
+  }
+  #banner__container .banner__text-container .banner__text .banner__subtitle {
+    /* font-size: 4.5em; */
+    font-size: 3.9em;
+  }
+  #banner__container .banner__text-container .banner__text .banner__sentence {
+    /* font-size: 2em; */
+    font-size: 1.7em;
+  }
+}
+
+@media (min-width: 50px) and (max-width: 375px) {
+  .banner__logo {
+    width: 22vh;
+    display: none;
+  }
+  #banner__container .banner__text-container .banner__text .banner__title {
+    font-size: 5.1em;
+  }
+  #banner__container .banner__text-container .banner__text .banner__subtitle {
+    font-size: 4.3em;
+  }
+  #banner__container .banner__text-container .banner__text .banner__sentence {
+    font-size: 1.6em;
   }
 }
 /*# sourceMappingURL=style.css.map */
