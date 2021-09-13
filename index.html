@@ -23,7 +23,6 @@
                     <ul class="navbar__links">
                         <li><a href="#">Inicio</a></li>
                         <li><a href="#">Indumentaria</a></li>
-                        <li><a href="#"><img class="nabvar__icons" src="media/search.svg" alt=""></a></li>
                         <li><a href="#"><img class="nabvar__icons" src="media/user.svg" alt=""></a></li>
                         <li><a href="#"><img class="nabvar__icons" src="media/cart.svg" alt=""></a></li>
                     </ul>
@@ -57,15 +56,15 @@
             <!-- Elementos generados a partir del JSON -->
             <div id="container__garments"></div>
             <!-- Carrito -->
-            <aside class="cart__container">
+            <div class="cart__container">
                 <h2 class="cart__title">Carrito</h2>
                 <!-- Elementos del carrito -->
                 <ul id="cart__list" class="list-group"></ul>
                 <hr>
                 <!-- Precio total -->
-                <p class="cart__text">Total: <span id="total"></span>$</p>
+                <p class="cart__text">Total: $<span id="total"></span></p>
                 <button id="boton-vaciar">Vaciar</button>
-            </aside>
+            </div>
         </div>
         <footer>
             <div id="footer__content">
@@ -75,7 +74,7 @@
         </footer>
     </main>
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/navbar.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
 </body>
 </html>

@@ -73,7 +73,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
   color: #ffca0a;
 }
 
-.navbar .navbar__list .navbar__links li a .nabvar__icons {
+.nabvar__icons {
   width: 24px;
 }
 
@@ -298,6 +298,7 @@ footer {
 }
 
 footer #footer__content {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,7 +310,6 @@ footer #footer__content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1420px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

@@ -56,13 +56,13 @@ html, body, h1, h2, h3, h4, h5, h6 {
                     &:hover{
                         color: #ffca0a;
                     }
-                    .nabvar__icons{
-                        width: 24px;
-                    }
                 }
             }
         }
     }
+}
+.nabvar__icons{
+    width: 24px;
 }
 
 /* Home section */
@@ -258,11 +258,11 @@ footer {
     height: 50px;
     background-color: #0c254d;
     #footer__content{
+        width: 100%;
         display: flex;
         flex-direction: row;
         color: rgb(204, 204, 204);
         justify-content: space-between;
-        max-width: 1420px;
         align-items: center;
         .footer__text {
             margin: 16px;
@@ -270,6 +270,28 @@ footer {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
