@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
     <link rel="icon" href="media/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -14,67 +15,110 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="navbar__container">
-                <div class="navbar__logo">
-                    <a class="navbar__title" href="index.html"><img src="media/la12.svg" alt=""></a>
-                </div>
-                <div id="mainListDiv" class="navbar__list">
-                    <ul class="navbar__links">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Indumentaria</a></li>
-                        <li><a href="#"><img class="nabvar__icons" src="media/user.svg" alt=""></a></li>
-                        <li><a href="#"><img class="nabvar__icons" src="media/cart.svg" alt=""></a></li>
+        <div class="container">
+            <!-- NAVBAR -->
+            <nav class="navbar">
+                <a href="index.html" class="navbar-brand"><img class="navbar-logo" src="media/la12.svg" alt=""></a>
+                <button type="button" class="navbar-toggler">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-collapse">
+                    <ul>
+                        <li><a href="#banner">Inicio</a></li>
+                        <li><a href="#products">Indumentaria</a></li>
+                        <li><a href="#footer-banner">Contacto</a></li>
                     </ul>
                 </div>
-                <span class="navTrigger">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                </span>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section id="banner__container">
-            <div class="banner__text-container">
-                <div class="banner__text">
-                    <img class="banner__logo" src="media/logolddlh.svg" alt="">
-                    <h1 class="banner__title">Los dueños de la historia</h1>
-                    <h3 class="banner__subtitle">La tienda sin descensos</h3>
-                    <p class="banner__sentence">¡Ahora vos también podes ser parte de la hinchada más grande del mundo! <br>
-                        ¿Estás preparado para vivir tu pasión como nunca antes?</p>
+
+                <div class="cart">
+                    <button type="button" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count-info">0</span>
+                    </button>
+
+                    <div class="cart-container">
+                        <div class="cart-list">
+                            <!-- SINGLE ITEM -->
+                            <!-- <div class="cart-item">
+                                <img src="media/remera.png" alt="imagenproducto">
+                                <div class="cart-item-info">
+                                    <h3 class="cart-item-name">Camiseta de Boca</h3>
+                                    <span class="cart-item-category">Chair</span>
+                                    <span class="cart-item-price">$1200</span>
+                                </div>
+                                <button type="button" class="cart-item-del-btn">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div> -->
+                            <!-- END OF SINGLE ITEM -->
+                        </div>
+                        <div class="cart-total">
+                            <h3>total: $</h3>
+                            <span id="cart-total-value"></span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <div class="container__ind">
-            <img class="star" src="media/star.svg" alt="star">
-            <h1 class="ind__title">Indumentaria</h1>
-            <img class="star" src="media/star.svg" alt="star">
+            </nav>
+            <!-- END OF NAVBAR -->
+
+            <!-- BANNER -->
+            <section id="banner">
+                <div class="banner-filter">
+                    <div class="banner-content">
+                        <img class="banner__logo" src="media/logolddlh.svg" alt="logo LDDLH">
+                        <h1 class="banner-title">Los dueños de la historia</h1>
+                        <h1 class="banner-subtitle"> La tienda sin descensos</h1>
+                        <p class="banner-text">¡Ahora vos también podes ser parte de la hinchada más grande del mundo! <br>
+                            ¿Estás preparado para vivir tu pasión como nunca antes?</p>
+                        <div class="btns">
+                            <button type="button" class="btn">Comprar Ya</button>
+                            <button type="button" class="btn">Info</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- END OF BANNER -->
         </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products">
         <div class="container">
-            <!-- Elementos generados a partir del JSON -->
-            <div id="container__garments"></div>
-            <!-- Carrito -->
-            <div class="cart__container">
-                <h2 class="cart__title">Carrito</h2>
-                <!-- Elementos del carrito -->
-                <ul id="cart__list" class="list-group"></ul>
-                <hr>
-                <!-- Precio total -->
-                <p class="cart__text">Total: $<span id="total"></span></p>
-                <button id="boton-vaciar">Vaciar</button>
+            <h2 class="products-title">Productos</h2>
+            <div class="product-list">
+                <!-- PRODUCTS HERE-->
             </div>
         </div>
-        <footer>
-            <div id="footer__content">
-                <p class="footer__text">Los Dueños de la Historia®</p>
-                <p class="footer__text">Terminos y condiciones | Aviso legal</p>
+    </section>
+    <!-- END OF PRODUCTS SECTION -->
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div id="footer-banner">
+            <div class="container">
+                <h2>Coleccion de ropa LDDLH</h2>
+                <p class="text">Los dueños de la historia somos una agrupación de hinchas fanáticos del Club Atlético Boca Juniors. No estamos relacionados ni formamos parte oficial del Club Atlético Boca Juniors.</p>
+                <button type="submit" class="btn-button">Ver mas</button>
             </div>
-        </footer>
-    </main>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/navbar.js"></script>
+        </div>
+
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://twitter.com/thomas_ginestra">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/thomasginestra/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/thomasginestra">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+        <!-- END OF FOOTER -->
+    <script src="js/app.js"></script>
 </body>
 </html>
