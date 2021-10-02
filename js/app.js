@@ -65,7 +65,6 @@ function loadJSON(){
     })
     .catch(error => {
         alert(`User live server or local server`);
-        //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
     })
 }
 
@@ -137,7 +136,7 @@ function loadCart(){
     }
     products.forEach(product => addToCartList(product));
 
-    // calculate and update UI of cart info 
+    // calculate and update UI of cart info
     updateCartInfo();
 }
 
